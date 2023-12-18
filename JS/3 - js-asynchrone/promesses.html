@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesses</title>
+</head>
+
+<body>
+
+    <script>
+        const fetchPromise = fetch(
+            "erreur://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+        );
+
+        console.log(fetchPromise);
+
+        fetchPromise
+            .then((reponse) => {
+                if(!reponse.ok) {
+                    throw new Error(`Erreur HTTP : ${reponse.status}`);
+                }
+                return reponse.json();
+            })
+            .then((json) => {
+                console.log(json[0].name);
+            })
+            .catch((error) => {
+                console.error(`Impossible de récupérer les produits : ${error}`);
+            });
+
+        console.log("Requête initiée...");
+    </script>
+</body>
+
+</html>
