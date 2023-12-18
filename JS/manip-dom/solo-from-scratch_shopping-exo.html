@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <article>
+        
+    </article>
+
+    <script>
+        const art = document.querySelector("article");
+
+        const mainTitle = document.createElement("h1");
+        mainTitle.textContent = "My shopping list";
+        art.appendChild(mainTitle);
+
+        const par = document.createElement("p");
+        par.textContent = "Enter a new item:";
+        const input = document.createElement("input");
+        input.style.marginLeft = "5px";
+        const addBtn = document.createElement("button");
+        addBtn.textContent = "Add item";
+        addBtn.style.marginLeft = "5px";
+
+        art.appendChild(par);
+        par.appendChild(input);
+        par.appendChild(addBtn);
+
+        const liste = document.createElement("ul");
+        const one = document.createElement("li");
+        one.textContent = "Eggs";
+        one.style.fontWeight = "600";
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Delete";
+        delBtn.style = "margin-left: 15px";
+
+        art.appendChild(one);
+        one.appendChild(delBtn);
+
+        function ajouterItem() {
+            const inputValue = input.value;
+            inputValue = "";
+            const list = document.createElement("ul");
+            const elem = document.createElement("li");
+            const span = document.createElement("span");
+            const btn = document.createElement("button");
+
+            li.appendChild(span);
+            li.appendChild(btn);
+
+            span.textContent = inputValue;
+
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>

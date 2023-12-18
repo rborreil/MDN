@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDN - Utiliser les objets</title>
+
+    <script>
+        // let maVoiture = new Object();
+        // maVoiture.fabricant = "Ford";
+        // maVoiture.modèle = "Mustang Grandé";
+        // maVoiture.année = "1969";
+        // maVoiture.couleur = "beige";
+
+        // console.log(maVoiture);
+
+        // let monObj = new Object();
+        // let str = "maChaîne";
+        // let rand = Math.random();
+        // let obj = new Object();
+
+        // monObj.type = "Syntaxe point";
+        // monObj["date created"] = "Chaîne avec un espace";
+        // monObj[str] = "Une valeur qui est une chaîne";
+        // monObj[rand] = "Nombre aléatoire";
+        // monObj[obj] = "Objet";
+        // monObj[""] = "Une chaîne vide";
+
+        // console.log(monObj);
+
+        // let nomPropriété = "fabricant";
+        // maVoiture[nomPropriété] = "Ford";
+
+        // nomPropriété = "modèle";
+        // maVoiture[nomPropriété] = "Mustang"
+
+        // console.log(maVoiture);
+
+
+        // function afficherProps(obj, nomObjet) {
+        //     let resultat = "";
+        //     for (let i in obj) {
+        //         if (obj.hasOwnProperty(i)) {
+        //             resultat += `${nomObjet}.${i} = ${obj[i]}\n`;
+        //         }
+        //     }
+        //     return resultat;
+        // }
+
+
+        // afficherProps(maVoiture, "maVoiture");
+
+        // Object.keys(maVoiture);
+        // Object.getOwnPropertyNames(maVoiture);
+
+        // function listerToutesLesProprietes(o){
+        //     let objectToInspect;
+        //     let resultat = [];
+
+        //     for (objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)){
+        //         resultat = resultat.concat(Object.getOwnPropertyNames(objectToInspect));
+        //     }
+        //     return resultat;
+        // }
+
+        // listerToutesLesProprietes(maVoiture);
+
+        // let objTest = {
+        //     propriete_1: "valeur_1",
+        //     2: "valeur_2",
+        //     "propriete n": "valeur_n",
+        // }
+
+        // console.log(objTest);
+
+        // let maRenault = {
+        //     couleur: "rouge",
+        //     modèle: "R5",
+        //     forme: "yaourt",
+        //     année: "1981",
+        //     moteur: {
+        //         cylindres: "4",
+        //         chevaux: "8",
+        //         tpm: "120",
+        //         vitesses: "6",
+        //     }
+        // }
+
+        // console.log(maRenault);
+
+        function Voiture(fabricant, modèle, année){
+            this.fabricant = fabricant;
+            this.modèle = modèle;
+            this.année = année;
+        }
+
+        let maVoiture = new Voiture("Eagle", "Talon TSi", 1993);
+        let voitureMorgan = new Voiture("Audi", "A3", 2005);
+        let voitureMax = new Voiture("Mazda", "Miata", 1990);
+
+        console.log(maVoiture);
+        console.log(voitureMax);
+        console.log(voitureMorgan);
+
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
